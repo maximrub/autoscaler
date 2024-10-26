@@ -125,3 +125,15 @@ func JoinStringMaps(items ...map[string]string) map[string]string {
 	}
 	return result
 }
+
+// FirstNotEmpty returns the first non-empty string from the input list.
+// If all strings are empty or no arguments are provided, it returns an empty string.
+func FirstNotEmpty(strs ...string) string {
+	for _, str := range strs {
+		if str != "" {
+			return str
+		}
+	}
+
+	return ""
+}
